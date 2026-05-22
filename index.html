@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSM KERJA - Prototype HTML</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">F</div>
+        <div>
+          <h1>FSM KERJA</h1>
+          <p>Universitas Diponegoro</p>
+        </div>
+      </div>
+
+      <nav class="nav" id="sidebarNav"></nav>
+
+      <button class="primary-action" data-page="report-form">+ Buat Laporan</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-toggle" id="mobileToggle">☰</button>
+        <div class="search-box">🔎 <input id="globalSearch" placeholder="Cari tugas, laporan, kegiatan..." /></div>
+        <div class="topbar-actions">
+          <select id="roleSwitcher" class="role-select"></select>
+          <button class="icon-btn" title="Notifikasi">🔔</button>
+          <button class="icon-btn" title="Pengaturan">⚙️</button>
+          <div class="user-chip">
+            <div class="avatar" id="avatarInitial">D</div>
+            <div>
+              <strong id="userName">Dekan FSM</strong>
+              <span id="userRoleLabel">Dekan</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="pageContent" class="content"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
